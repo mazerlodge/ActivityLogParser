@@ -1,0 +1,52 @@
+﻿S1 POA MDT 202010
+	
+09/28 (M) 
+	- RERS, Initiate ETL tech spec for H_MATL_VEND_DECLARE 
+	- RERS, Create source qualifier SQL for ETL to HANA vendor declaration table 
+	- RERS, Initiate ETL tech spec for H_MATL_PROD_PREF 
+	- DHC, Status meeting 
+	- RERS, Create source qualifier SQL for ETL to HANA product preference table 
+	- RERS, Creating validation SQL for XDS layer 
+	- RERS, Creating validation SQL for HANA layer 
+	- DHC, Meeting on physician’s affiliation file design 
+
+09/29
+	- DHC, Expand DFD with query for SFMX sourced levels 
+	- DHC, Create Validation SQL for INDS _ROLE and _REL
+	- RERS, Code review on change for INC5938360
+	- DHC, Q&A w/ Sai on testing for mapping update to cvds_contact_hcp_specialty
+	- DHC, Validation of CHG0185259 - CONTACT_SPECIALTY_FID Update Mapping
+	- Misc, RFC Call for informatica and HANA changes 
+	- Misc, Update DTS assignments 
+	- RERS, Gather info for RERS to DCC assessment meeting 
+	- RERS, Meeting on RERS to DCC assessment 
+	- DHC, Reviewing issue with N/A appearing in specialty 
+	- DHC, Meeting with Sai and Taru on specialty now including ‘N/A’ 
+	- DHC, Meeting on timeline for Physician Group ECR 
+	- DHC, Updated MTP and driver script
+	- RERS, Support meeting 
+	- RERS, Validate object checkout is current with COO objects 
+
+09/30 
+	- DHC, Updated deployment steps text file 
+	- DHC, Initiate DFD for Physicians Group 
+	- DHC, Status meeting 
+	- DHC, Building question list from requirements spreadsheet 
+	- DHC, Sent internal employee specs to Ankit for QA prep 
+	- RERS, MAR COO hand load test, validate CDC entries
+	- DHC, Migrate notes to updated requirements spreadsheet 
+
+10/01 
+	- DHC, Scheduled physician group requirements question review meeting 
+	- RERS, Validate tech specs ready for dev 
+	- Misc, BI ETL Design and Perf Review 
+	- RERS, Preparing dev package of COO tech specs, DFD, and SQL 
+	- RERS, Meeting on GTS data curation 
+	- RERS, Locate SQL for RAC-RAN update 
+	- DHC, Resume question list for Physician Group 
+
+10/02
+	- DHC, Expand question list for SDS_DHC_PA_HOSPITAL requirements 
+	- DHC, Expand question list for SDS_DHC_PA_NETWORK requirements
+	- Misc, RFC Call for Informatica and HANA changes 
+	- DHC, Expand question list for SDS_DHC_PA_PHYSICIAN_GROUPS tab

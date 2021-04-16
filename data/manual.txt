@@ -1,0 +1,47 @@
+-- manual file
+RERS
+	- Initiate ETL tech spec for H_MATL_VEND_DECLARE
+	- Create source qualifier SQL for ETL to HANA vendor declaration table
+	- Initiate ETL tech spec for H_MATL_PROD_PREF
+	- Create source qualifier SQL for ETL to HANA product preference table
+	- Creating validation SQL for XDS layer
+	- Creating validation SQL for HANA layer
+	- Code review on change for INC5938360
+	- Gather info for RERS to DCC assessment meeting
+	- Meeting on RERS to DCC assessment
+	- Support meeting
+	- Validate object checkout is current with COO objects
+	- MAR COO hand load test, validate CDC entries
+	- Validate tech specs ready for dev
+	- Preparing dev package of COO tech specs, DFD, and SQL
+	- Meeting on GTS data curation
+	- Locate SQL for RAC-RAN update
+
+DHC
+	- Status meeting
+	- Meeting on physician’s affiliation file design
+	- Expand DFD with query for SFMX sourced levels
+	- Create Validation SQL for INDS _ROLE and _REL
+	- Q&A w/ Sai on testing for mapping update to cvds_contact_hcp_specialty
+	- Validation of CHG0185259 - CONTACT_SPECIALTY_FID Update Mapping
+	- Reviewing issue with N/A appearing in specialty
+	- Meeting with Sai and Taru on specialty now including ‘N/A’
+	- Meeting on timeline for Physician Group ECR
+	- Updated MTP and driver script
+	- Updated deployment steps text file
+	- Initiate DFD for Physicians Group
+	- Status meeting
+	- Building question list from requirements spreadsheet
+	- Sent internal employee specs to Ankit for QA prep
+	- Migrate notes to updated requirements spreadsheet
+	- Scheduled physician group requirements question review meeting
+	- Resume question list for Physician Group
+	- Expand question list for SDS_DHC_PA_HOSPITAL requirements
+	- Expand question list for SDS_DHC_PA_NETWORK requirements
+	- Expand question list for SDS_DHC_PA_PHYSICIAN_GROUPS tab
+
+Misc
+	- RFC Call for informatica and HANA changes
+	- Update DTS assignments
+	- BI ETL Design and Perf Review
+	- RFC Call for Informatica and HANA changes

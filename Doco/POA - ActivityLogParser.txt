@@ -1,0 +1,20 @@
+POA - ActivityLogParser
+
+	Goal - Automate conversion of activity log entries to weekly status bullet lists by project. 
+	
+	
+==== Activity Log - 202104 ====
+
+04/02
+	- Initial Version 
+	
+04/16 
+	- Validated output and added manual file for comparision (out.txt vs manual.txt) 
+	
+	
+> In-Progress: 
+
+
+> Next: 
+	- Add args parser and enable -in -out -debug command line switches 
+

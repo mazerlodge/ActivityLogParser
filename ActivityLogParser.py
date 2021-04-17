@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 
+# TODO: Add ArgParser for use w/ params -in -out -debug
+
 # vars
 fn = "./data/SampleActivityLog.txt"
 tagDict = {}

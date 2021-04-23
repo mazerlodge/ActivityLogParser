@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 # vars
-fn = "./data/SampleActivityLog.txt"
+fn = "./data/in.txt"
 tagDict = {}
 
 # Read the activity log

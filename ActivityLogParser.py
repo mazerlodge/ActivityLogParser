@@ -1,15 +1,38 @@
 #!/usr/local/bin/python3
 
 # TODO: Add ArgParser for use w/ params -in -out -debug
+import sys 
+from ArgTools import ArgParser
+
+def debugMsg(msg): 
+	global bInDebug
+
+	if (bInDebug):
+		print(msg) 
+
 
 # vars
-fn = "./data/SampleActivityLog.txt"
+inFilename = "./data/in.txt"
+outFilename = "NOT_SET"
+bInDebug = False
 tagDict = {}
+ap = ArgParser(sys.argv)
+
+# check command line for input and/or output filename(s) 
+if (ap.isInArgs("-in", True)):
+	inFilename = ap.getArgValue("-in")
+
+if (ap.isInArgs("-out", True)):
+	outFilename = ap.getArgValue("-out")
+
+# check command line for debug mode
+if (ap.isInArgs("-debug", False)): 
+	bInDebug = True
 
 # Read the activity log
-file = open(fn, "r")
-lines = file.readlines()
-file.close()
+inFile = open(inFilename, "r")
+lines = inFile.readlines()
+inFile.close()
 
 # group lines from the log according to the line tag. 
 # Note: line tag = start of line text between dash and comma.
@@ -24,13 +47,13 @@ for aLine in lines:
 			# is current categoryTag in the dictionary already
 			categoryList  = tagDict.get(categoryTag)
 			if categoryList == None: 
-				print("New category")
+				debugMsg("New category")
 				categoryList = []
 				categoryList.append(outLine)  
 				tagDict[categoryTag] = categoryList 
 			else: 
 				categoryList.append(outLine)
-				print("Added, list now %d to category [%s]" % (len(categoryList), outLine))
+				debugMsg("Added, list now %d to category [%s]" % (len(categoryList), outLine))
 
 # Output lines grouped by tags
 for aKey in tagDict: 
@@ -38,3 +61,20 @@ for aKey in tagDict:
 	aList = tagDict[aKey]
 	for aLine in aList:
 		print("\t%s" % aLine) 
+	print("")
+
+# Prepare the output file if one was specified 
+if (outFilename != "NOT_SET"): 
+	outFile = open(outFilename, "w")
+	for aKey in tagDict: 
+		outLine = "%s\n" % aKey
+		outFile.write(outLine)
+		aList = tagDict[aKey]
+		for aLine in aList:
+			outLine = "\t%s\n" % aLine
+			outFile.write(outLine)
+		outFile.write("\n")
+
+	outFile.flush() 
+	outFile.close()
+	

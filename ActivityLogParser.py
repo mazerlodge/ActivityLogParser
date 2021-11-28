@@ -9,9 +9,18 @@ def debugMsg(msg):
 	if (bInDebug):
 		print(msg) 
 
+def getCodePath():
+	launchFile = sys.argv[0]
+	launchFileReversed = launchFile[::-1]
+	lastSlashPos = launchFileReversed.index('/')
+	pathPart = launchFile[0:len(launchFile)-lastSlashPos]
+
+	return(pathPart)
+ 
 
 # vars
-inFilename = "./data/in.txt"
+codePath = getCodePath()
+inFilename = codePath + "/data/in.txt"
 outFilename = "NOT_SET"
 bInDebug = False
 tagDict = {}

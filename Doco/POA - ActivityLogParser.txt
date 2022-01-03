@@ -11,12 +11,10 @@ POA - ActivityLogParser
 04/16 
 	- Validated output and added manual file for comparision (out.txt vs manual.txt) 
 	
-04/24 
-	- Added ArgTools and support for command line params -in -out and -debug 
 	
 > In-Progress: 
 
 
 > Next: 
-
+	- Add args parser and enable -in -out -debug command line switches 
 

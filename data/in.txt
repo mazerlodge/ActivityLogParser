@@ -2,4 +2,6 @@
 11/28 (U) 
 	- Sample, this is a sample entry. 
 	- Sample, whatever is before the comma becomes the grouping word.
-	
+	- Cat2, another category entry
+	- Cat2, both cats should have spaces 
+	- Cat2, between their headings 

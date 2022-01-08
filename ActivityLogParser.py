@@ -12,8 +12,12 @@ def debugMsg(msg):
 def getCodePath():
 	launchFile = sys.argv[0]
 	launchFileReversed = launchFile[::-1]
-	lastSlashPos = launchFileReversed.index('/')
-	pathPart = launchFile[0:len(launchFile)-lastSlashPos]
+	if launchFileReversed.find('/') == -1:
+		lastSlashPos = 0
+		pathPart = "."
+	else: 
+		lastSlashPos = launchFileReversed.index('/')
+		pathPart = launchFile[0:len(launchFile)-lastSlashPos]
 
 	return(pathPart)
  
@@ -50,20 +54,20 @@ for aLine in lines:
 		if (commaPos > -1):
 			categoryTag = aLine[3:commaPos]
 			outLine = '- ' + aLine[commaPos+2:].rstrip()
-			#print("%s --> %s" % (categoryTag, outLine.rstrip())) 
 
 			# is current categoryTag in the dictionary already
 			categoryList  = tagDict.get(categoryTag)
 			if categoryList == None: 
-				debugMsg("New category")
+				debugMsg("New category [%s]" % categoryTag)
 				categoryList = []
 				categoryList.append(outLine)  
 				tagDict[categoryTag] = categoryList 
 			else: 
 				categoryList.append(outLine)
-				debugMsg("Added, list now %d to category [%s]" % (len(categoryList), outLine))
+				debugMsg("Added, list now %d long, entry is [%s]" % (len(categoryList), outLine))
 
 # Output lines grouped by tags
+print("")
 for aKey in tagDict: 
 	print(aKey) 
 	aList = tagDict[aKey]
